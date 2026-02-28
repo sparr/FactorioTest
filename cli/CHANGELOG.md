@@ -1,3 +1,9 @@
+## Unreleased
+
+### Improvements
+
+- Skipped tests are no longer printed in verbose mode output.
+
 ## v3.5.1
 
 ### Changes

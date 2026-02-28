@@ -577,10 +577,10 @@ describe("OutputPrinter", () => {
     expect(output.some((line) => line.includes("TODO"))).toBe(true)
   })
 
-  it("shows skipped tests with verbose", () => {
+  it("hides skipped tests with verbose", () => {
     const printer = new OutputPrinter({ verbose: true })
     printer.printTestResult(skippedTest)
-    expect(output.some((line) => line.includes("SKIP"))).toBe(true)
+    expect(output).toHaveLength(0)
   })
 
   it("shows todo tests with verbose", () => {

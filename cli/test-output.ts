@@ -211,7 +211,7 @@ export class OutputPrinter {
 
   printTestResult(test: CapturedTest): void {
     if (this.options.quiet) return
-    if (test.result === "skipped" && !this.options.verbose) return
+    if (test.result === "skipped") return
     this.formatter.formatTestResult(test)
   }
 

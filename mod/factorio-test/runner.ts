@@ -147,7 +147,7 @@ class TestRunnerImpl implements TestTaskRunner, TestRunner {
 
   private startTestRun(): Task {
     const { state } = this
-    state.profiler = game.create_profiler()
+    state.profiler = helpers.create_profiler()
     state.setTestStage(TestStage.Running)
     if (shouldReorderFailedFirst(state)) {
       markFailedTestsAndDescendants(state.rootBlock)
@@ -237,7 +237,7 @@ class TestRunnerImpl implements TestTaskRunner, TestRunner {
   }
 
   startTest(test: Test): Task {
-    test.profiler = game.create_profiler()
+    test.profiler = helpers.create_profiler()
     const testRun = TestRunnerImpl.newTestRun(test, 0)
     this.state.currentTestRun = testRun
     this.state.raiseTestEvent({

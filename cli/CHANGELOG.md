@@ -1,7 +1,6 @@
 ## Unreleased
 
-### Improvements
-
+- Updated for Factorio 2.1!
 - Skipped tests are no longer printed in verbose mode output.
 
 ## v3.5.1

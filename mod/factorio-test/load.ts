@@ -127,6 +127,11 @@ function doRunTests() {
     if (currentRunner.isDone()) {
       currentRunner = undefined
       revertTappedEvents()
+    } else if (game !== undefined) {
+      // A test hook may have paused the game (e.g. entering the map editor pauses by default
+      // since 2.1). The runner is driven by on_tick, which only fires while ticks advance, so
+      // keep the game unpaused for the duration of the run.
+      game.tick_paused = false
     }
   })
 }

@@ -7,7 +7,7 @@ import { CliError } from "./cli-error.js"
 
 const MIN_FACTORIO_TEST_VERSION = "3.0.0"
 
-const BUILTIN_MODS = new Set(["base", "quality", "elevated-rails", "space-age"])
+const BUILTIN_MODS = new Set(["base", "quality", "elevated-rails", "space-age", "recycler"])
 
 type Version = [number, number, number]
 

@@ -28,16 +28,10 @@ const testCases: TestCase[] = [
     expectExitCode: 1,
   },
   {
-    name: "--verbose shows all tests including SKIP",
+    name: "--verbose shows per-test output and start events but not SKIP",
     args: ["--verbose"],
-    expectedOutput: [
-      "PASS test1 > Pass",
-      "FAIL test1 > each 2",
-      "TODO test1 > TODO",
-      "SKIP test1 > Skip",
-      "Starting: test1 > Pass",
-    ],
-    unexpectedOutput: ['"type":"testStarted"'],
+    expectedOutput: ["PASS test1 > Pass", "FAIL test1 > each 2", "TODO test1 > TODO", "Starting: test1 > Pass"],
+    unexpectedOutput: ['"type":"testStarted"', "SKIP test1 > Skip"],
     expectExitCode: 1,
   },
   {

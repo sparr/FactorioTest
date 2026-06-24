@@ -1,6 +1,6 @@
 import * as fs from "fs"
 import * as path from "path"
-import { runCli, runTestsDirectly, TestContext, TestDefinition } from "../test-utils.js"
+import { runCli, runTests, TestContext, TestDefinition } from "../test-utils.js"
 
 async function testResultsFileCreated(ctx: TestContext): Promise<boolean> {
   await runCli({ dataDir: ctx.dataDir })
@@ -100,5 +100,5 @@ export const tests: TestDefinition[] = [
 ]
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  runTestsDirectly(tests)
+  runTests(tests)
 }

@@ -1,5 +1,5 @@
 import * as path from "path"
-import { runCliWithTimeout, runTestsDirectly, TestContext, TestDefinition } from "../test-utils.js"
+import { runCliWithTimeout, runTests, TestContext, TestDefinition } from "../test-utils.js"
 
 export const tests: TestDefinition[] = [
   {
@@ -48,5 +48,5 @@ export const tests: TestDefinition[] = [
 ]
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  runTestsDirectly(tests)
+  runTests(tests)
 }

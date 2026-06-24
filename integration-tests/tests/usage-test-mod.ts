@@ -1,4 +1,4 @@
-import { runCli, runTestsDirectly, TestContext, TestDefinition } from "../test-utils.js"
+import { runCli, runTests, TestContext, TestDefinition } from "../test-utils.js"
 
 async function runTest(ctx: TestContext): Promise<boolean> {
   const { stdout, code } = await runCli({ dataDir: ctx.dataDir })
@@ -30,5 +30,5 @@ async function runTest(ctx: TestContext): Promise<boolean> {
 export const tests: TestDefinition[] = [{ name: "Usage test mod runs correctly", run: runTest }]
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  runTestsDirectly(tests)
+  runTests(tests)
 }

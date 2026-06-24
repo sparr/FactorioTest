@@ -1,7 +1,7 @@
 import * as child_process from "child_process"
 import * as fs from "fs"
 import * as path from "path"
-import { root, runTestsDirectly, sleep, TestContext, TestDefinition, waitForOutput } from "../test-utils.js"
+import { root, runTests, sleep, TestContext, TestDefinition, waitForOutput } from "../test-utils.js"
 
 const modFiles = ["info.json", "control.lua", "test1.lua", "lualib_bundle.lua"]
 
@@ -139,5 +139,5 @@ export const tests: TestDefinition[] = [
 ]
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  runTestsDirectly(tests)
+  runTests(tests)
 }

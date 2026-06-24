@@ -1,6 +1,6 @@
 import * as fs from "fs"
 import * as path from "path"
-import { runCli, runTestsDirectly, TestContext, TestDefinition } from "../test-utils.js"
+import { runCli, runTests, TestContext, TestDefinition } from "../test-utils.js"
 
 interface TestCase {
   name: string
@@ -234,5 +234,5 @@ function createTestFromCase(tc: TestCase): TestDefinition {
 export const tests: TestDefinition[] = testCases.map(createTestFromCase)
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  runTestsDirectly(tests)
+  runTests(tests)
 }

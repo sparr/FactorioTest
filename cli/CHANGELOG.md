@@ -1,7 +1,8 @@
-## Unreleased
+## v3.6.0
 
 - Updated for Factorio 2.1!
 - Skipped tests are no longer printed in verbose mode output.
+- Recognize `recycler` as a built-in 2.1 mod (no longer downloaded from the portal).
 
 ## v3.5.1
 

@@ -9,7 +9,7 @@
     "lua-types": "^2.13.1",
     "tsx": "^4.21.0",
     "typed-factorio": "^4.0.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "typescript-to-lua": "^1.33.2"
   },
   "scripts": {
